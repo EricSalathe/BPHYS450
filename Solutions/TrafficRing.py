@@ -65,7 +65,7 @@ def ratefunction_eps(t, X):
 T = 1.8 #time headway
 delta_exp = 4
 L = 5
-a_accel = 0.5
+a_accel = 0.3
 b_decel = 3
 v0 = 28 #desired speed in m/s
 s0 = 2.0 #desired gap m
@@ -107,13 +107,13 @@ from matplotlib.pyplot import figure, subplot
 fig=figure()
 
 ax1 = subplot()
-ax1.plot(time,xout[:,0],'b') # just the first car
+ax1.plot(time,xout[:,::5],'b') # just the first car
 ax1.set_xlabel('time (s)')
 ax1.set_ylabel('distance (m)', color='b')
 ax1.tick_params('y', colors='b')
 
 ax2=ax1.twinx()
-ax2.plot(time,vout[:,0],'r')
+ax2.plot(time,vout[:,::5],'r')
 ax2.set_ylabel('velocity (m/s)', color='r')
 ax2.tick_params('y', colors='r')
 
