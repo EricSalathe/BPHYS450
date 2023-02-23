@@ -65,13 +65,13 @@ def ratefunction_eps(t, X):
 T = 1.8 #time headway
 delta_exp = 4
 L = 5
-a_accel = 0.3
-b_decel = 3
+a_accel = 1
+b_decel = .3
 v0 = 28 #desired speed in m/s
 s0 = 2.0 #desired gap m
 
 Circ = 1000
-ncar = 20
+ncar = 10
 
 # set initial conditions
 # Cars initially spaced out by 10 lengths F to R
